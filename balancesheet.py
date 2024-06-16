@@ -27,5 +27,5 @@ def fetch_and_save_balance_sheet(ticker):
 
 if __name__ == "__main__":
     # Get the ticker symbol from the user
-    ticker = input("Enter the ticker symbol (e.g., 'AAPL' for Apple Inc.): ").strip()
+    ticker = input("Enter the ticker symbol (e.g., 'AAPL' for Apple Inc.'): ").strip()
     fetch_and_save_balance_sheet(ticker)
