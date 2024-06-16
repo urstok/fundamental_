@@ -1,3 +1,5 @@
+import subprocess
+import os
 import pandas as pd
 import plotly.graph_objects as go
 
@@ -22,7 +24,7 @@ def plot_balance_sheet(csv_file):
     # Update the layout of the graph
     fig.update_layout(
         title='Consolidated Balance Sheet Components Over Time',
-        xaxis_title='Date',
+        xaxis_title='Dates',
         yaxis_title='Amount',
         barmode='group',  # Arrange bars in groups
         template='plotly_dark'
@@ -30,13 +32,3 @@ def plot_balance_sheet(csv_file):
 
     # Show the graph
     fig.show()
-
-# Main script
-if __name__ == "__main__":
-    # Get the CSV file name from the user
-    csv_file = input("Enter the CSV file name (e.g., 'sbi_balance_sheet.csv'): ").strip()
-
-    try:
-        plot_balance_sheet(csv_file)
-    except FileNotFoundError:
-        print(f"File '{csv_file}' not found. Please check the file name and try again.")
