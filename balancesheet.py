@@ -26,6 +26,5 @@ def fetch_and_save_balance_sheet(ticker):
     print(f"{ticker} balance sheet data has been saved to '{filename}'")
 
 if __name__ == "__main__":
-    # Get the ticker symbol from the user
     ticker = input("Enter the ticker symbol (e.g., 'AAPL' for Apple Inc.'): ").strip()
     fetch_and_save_balance_sheet(ticker)
